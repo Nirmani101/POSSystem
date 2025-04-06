@@ -42,7 +42,13 @@
                 <DataGridTextColumn Header="Total" Binding="{Binding TotalPrice, StringFormat=C}" Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
-
+        <!-- Total Price -->
+        <Border Grid.Row="4" BorderBrush="Gray" BorderThickness="1" Padding="10" Background="LightGray">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Text="Total:" FontWeight="Bold" Margin="0,0,10,0"/>
+                <TextBlock Text="{Binding TotalPrice, StringFormat=C}" FontWeight="Bold" FontSize="16"/>
+            </StackPanel>
+        </Border>
 
 
     </Grid>
