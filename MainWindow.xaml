@@ -32,7 +32,16 @@
                 <DataGridTextColumn Header="In Stock" Binding="{Binding QuantityInStock}" Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
-
+        <!-- Cart Items -->
+        <TextBlock Grid.Row="2" Text="Cart Items:" FontWeight="Bold" Margin="0,0,0,5"/>
+        <DataGrid Grid.Row="3" ItemsSource="{Binding CartItems}" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Product" Binding="{Binding Product.Name}" Width="*"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Product.Price, StringFormat=C}" Width="100"/>
+                <DataGridTextColumn Header="Qty" Binding="{Binding Quantity}" Width="80"/>
+                <DataGridTextColumn Header="Total" Binding="{Binding TotalPrice, StringFormat=C}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
 
 
